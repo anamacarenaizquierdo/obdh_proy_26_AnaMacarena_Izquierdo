@@ -175,7 +175,7 @@ DSubEst
 218 449 203 373 3
 [FinGraficoRama]
 InitFlightPlan
-true
+GExecFlightPlan()
 FlightPlan
 DSubEst
 ;
@@ -198,7 +198,7 @@ CtrlAlgorithm
 [Version Ramas]
 5
 PlanDone
-true
+GFlightPlanDone()
 Ready
 DSubEst
 ;
@@ -330,7 +330,7 @@ true
 [VariablesConstantes]
 0
 [Metodos]
-4
+6
 [Version Metodos]
 21
 BasicAction
@@ -391,6 +391,24 @@ DroneMngCtrl
 SDroneTC
 CDTCHandler
 EDROOMprioVeryHigh
+Guard
+GFlightPlanDone()
+0
+0
+0
+0
+1
+
+0
+Guard
+GExecFlightPlan()
+0
+0
+0
+0
+1
+
+0
 [MaquinasSubEstados]
 0
 [FinMaquinasSubEstados]
