@@ -178,7 +178,7 @@ InitFlightPlan
 GExecFlightPlan()
 FlightPlan
 DSubEst
-;
+FInitFlightPlan();
 
  
 
@@ -218,7 +218,7 @@ ProgNextCtrl
 true
 FlightPlan
 DSubEst
-;
+FProgNextCtrl();
 
  
 
@@ -330,7 +330,7 @@ true
 [VariablesConstantes]
 0
 [Metodos]
-6
+8
 [Version Metodos]
 21
 BasicAction
@@ -409,6 +409,46 @@ GExecFlightPlan()
 1
 
 0
+Inform
+FInitFlightPlan()
+0
+0
+0
+0
+1
+
+5
+	 
+	//Timing Service useful methods
+	 
+	//time.GetTime(); // Get current monotonic time
+	//time.Add(X,Y); // Add X sec + Y microsec
+[ServiceRequest]
+InformAt
+DroneTimer
+EDROOMSignalTimeout
+CDTCHandler
+EDROOMprioVeryHigh
+Inform
+FProgNextCtrl()
+0
+0
+0
+0
+1
+
+5
+	 
+	//Timing Service useful methods
+	 
+	//time.GetTime(); // Get current monotonic time
+	//time.Add(X,Y); // Add X sec + Y microsec
+[ServiceRequest]
+InformAt
+DroneTimer
+EDROOMSignalTimeout
+CDTCHandler
+EDROOMprioVeryHigh
 [MaquinasSubEstados]
 0
 [FinMaquinasSubEstados]
