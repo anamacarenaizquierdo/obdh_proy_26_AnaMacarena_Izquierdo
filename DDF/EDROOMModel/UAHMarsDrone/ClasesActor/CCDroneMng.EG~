@@ -309,10 +309,10 @@ FlightPlan
 OSubEst
 CtrlAlgorithm
 DPEleccion
-;
+FFlightCtrlAlgorithm();
 [Trigger]
- 
- 
+DroneTimer
+EDROOMSignalTimeout
 true
  
  
@@ -337,7 +337,7 @@ VNextCtrl
 Variable
 0
 [Metodos]
-8
+9
 [Version Metodos]
 21
 BasicAction
@@ -454,6 +454,15 @@ DroneTimer
 EDROOMSignalTimeout
 CDTCHandler
 EDROOMprioVeryHigh
+BasicAction
+FFlightCtrlAlgorithm()
+0
+0
+0
+0
+1
+
+0
 [MaquinasSubEstados]
 0
 [FinMaquinasSubEstados]
