@@ -78,7 +78,7 @@ Timer
 Top
 NULL
 [Subestados]
-1
+4
 [Version SubEstados]
 3
 I
@@ -94,14 +94,239 @@ I
 0
 73 73 55 55
 [FinObjetoGrafico]
-[PuntosEleccion]
+SelfTest
+;
+;
+;
+;
+;
+1
 0
+[ObjetoGrafico]
+[Version Objeto Grafico]
+0
+178 162 90 60
+[FinObjetoGrafico]
+Ready
+;
+;
+;
+;
+;
+1
+0
+[ObjetoGrafico]
+[Version Objeto Grafico]
+0
+179 313 128 60
+[FinObjetoGrafico]
+FlightPlan
+;
+;
+;
+;
+;
+1
+0
+[ObjetoGrafico]
+[Version Objeto Grafico]
+0
+139 530 437 78
+[FinObjetoGrafico]
+[PuntosEleccion]
+2
 [Version PuntosEleccion]
 2
-[Transiciones]
+ExecTc
 0
+[ObjetoGrafico]
+[Version Objeto Grafico]
+0
+218 432 35 35
+[FinObjetoGrafico]
+CtrlAlgorithm
+0
+[ObjetoGrafico]
+[Version Objeto Grafico]
+0
+452 324 35 35
+[FinObjetoGrafico]
+ExecTc
+0
+[Ramas]
+2
+[Version Ramas]
+5
+WaitFP
+true
+Ready
+DSubEst
+;
+
+ 
+
+;
+;
+;
+;
+[GraficoRama]
+[Version GraficoRama]
+0
+218 449 203 373 3
+[FinGraficoRama]
+InitFlightPlan
+true
+FlightPlan
+DSubEst
+;
+
+ 
+
+;
+;
+;
+;
+[GraficoRama]
+[Version GraficoRama]
+0
+235 466 239 530 0
+[FinGraficoRama]
+CtrlAlgorithm
+0
+[Ramas]
+2
+[Version Ramas]
+5
+PlanDone
+true
+Ready
+DSubEst
+;
+
+ 
+
+;
+;
+;
+;
+[GraficoRama]
+[Version GraficoRama]
+0
+452 341 307 341 2
+[FinGraficoRama]
+ProgNextCtrl
+true
+FlightPlan
+DSubEst
+;
+
+ 
+
+;
+;
+;
+;
+[GraficoRama]
+[Version GraficoRama]
+0
+469 324 552 530 0
+[FinGraficoRama]
+[Transiciones]
+4
 [Version Transicion]
 5
+Init
+I
+OSubEstI
+SelfTest
+DSubEst
+;
+[Trigger]
+EDROOMsl
+EDROOMStart
+true
+ 
+ 
+ 
+;
+;
+;
+0
+;
+[GraficoTransicion]
+[Version GraficoTransicion]
+0
+123 113 189 162 0
+[FinGraficoTransicion]
+ToReady
+SelfTest
+OSubEst
+Ready
+DSubEst
+;
+[Trigger]
+ 
+ 
+true
+ 
+ 
+ 
+;
+;
+;
+0
+;
+[GraficoTransicion]
+[Version GraficoTransicion]
+0
+225 222 243 313 0
+[FinGraficoTransicion]
+ExecTc
+Ready
+OSubEst
+ExecTc
+DPEleccion
+;
+[Trigger]
+ 
+ 
+true
+ 
+ 
+ 
+;
+;
+;
+0
+;
+[GraficoTransicion]
+[Version GraficoTransicion]
+0
+245 373 235 432 2
+[FinGraficoTransicion]
+CtrlAlgorithm
+FlightPlan
+OSubEst
+CtrlAlgorithm
+DPEleccion
+;
+[Trigger]
+ 
+ 
+true
+ 
+ 
+ 
+;
+;
+;
+0
+;
+[GraficoTransicion]
+[Version GraficoTransicion]
+0
+533 530 469 358 3
+[FinGraficoTransicion]
 [VariablesConstantes]
 0
 [Metodos]
