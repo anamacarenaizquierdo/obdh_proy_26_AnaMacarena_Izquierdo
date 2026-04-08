@@ -328,6 +328,13 @@ true
 533 530 469 358 3
 [FinGraficoTransicion]
 [VariablesConstantes]
+1
+[Version VariYConst]
+0
+VNextCtrl
+
+
+Variable
 0
 [Metodos]
 8
