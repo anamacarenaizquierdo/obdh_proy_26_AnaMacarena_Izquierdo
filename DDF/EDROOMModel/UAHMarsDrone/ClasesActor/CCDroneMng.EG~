@@ -20,7 +20,29 @@ NULL
 1
 [FinStack]
 [Puertos]
+2
+[Version Puerto]
 0
+DroneMngCtrl
+1
+1
+0
+[Version Grafico Puerto]
+0
+69
+4
+CPDroneMngCtrl
+[Version Puerto]
+0
+DroneTimer
+0
+1
+1
+[Version Grafico Puerto]
+0
+71
+17
+EDROOMTimingSAP
 [FinPuertos]
 [ActoresComponente]
 0
@@ -29,7 +51,7 @@ NULL
 0
 [FinUniones]
 [NumTimers]
-0
+2
 [FinNumTimers]
 [NumMsgDef]
 10
@@ -44,7 +66,12 @@ NULL
 [Modulos]
 0
 [Eventos]
-0
+1
+[Event]
+[Version]
+1
+EvTimerDroneTimer
+Timer
 [Maquina de Estados]
 [Version Maquina de Estados]
 1
