@@ -216,14 +216,14 @@ public:
 
 
 		//!Variables
-		  &VNextCtrl;
+		Pr_Time &VNextCtrl;
 
 
 
 
 		//!Constructor
 		EDROOM_CTX_Top_0 (CCDroneMng &act,
-				  & EDROOMpVarVNextCtrl );
+				Pr_Time & EDROOMpVarVNextCtrl );
 
 		//!Copy constructor
 		EDROOM_CTX_Top_0 (EDROOM_CTX_Top_0 &context);
@@ -326,7 +326,7 @@ public:
 		EDROOM_CTX_Top_0::TEDROOMStateID edroomNextState;
 
 		//!Variables
-		  VNextCtrl;
+		Pr_Time VNextCtrl;
 
 
 

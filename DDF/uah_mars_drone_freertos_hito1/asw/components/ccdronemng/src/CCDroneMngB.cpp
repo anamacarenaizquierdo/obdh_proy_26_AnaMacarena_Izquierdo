@@ -11,7 +11,7 @@
 	// CONSTRUCTORS***********************************************
 
 CCDroneMng::EDROOM_CTX_Top_0::EDROOM_CTX_Top_0(CCDroneMng &act,
-	   & EDROOMpVarVNextCtrl ):
+	 Pr_Time & EDROOMpVarVNextCtrl ):
 
 	EDROOMcomponent(act),
 	Msg(EDROOMcomponent.Msg),
