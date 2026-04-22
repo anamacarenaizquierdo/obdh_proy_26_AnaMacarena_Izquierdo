@@ -170,9 +170,9 @@ true
 Ready
 DSubEst
 ;
+
  
- 
- 
+
 ;
 ;
 ;
@@ -187,9 +187,9 @@ GExecFlightPlan()
 FlightPlan
 DSubEst
 FInitFlightPlan();
+
  
- 
- 
+
 ;
 ;
 ;
@@ -210,9 +210,9 @@ GFlightPlanDone()
 Ready
 DSubEst
 FToReady();
+
  
- 
- 
+
 ;
 ;
 ;
@@ -227,9 +227,9 @@ true
 FlightPlan
 DSubEst
 FProgNextCtrl();
+
  
- 
- 
+
 ;
 ;
 ;
@@ -305,7 +305,7 @@ true
 FExecDroneTc();
 ;
 ;
-1
+0
 ;
 [GraficoTransicion]
 [Version GraficoTransicion]
@@ -414,7 +414,7 @@ FInitFlightPlan()
  
 4
 time.GetTime(); // Get current monotonic time
-time+=Pr_Time(10,0); // Add X sec + Y microsec
+time+=Pr_Time(0,10000); // Add X sec + Y microsec
 VNextCtrl=time;
 pus_service129_init_flight_plan();
 [ServiceRequest]
@@ -432,7 +432,7 @@ FProgNextCtrl()
 1
  
 2
-VNextCtrl+= Pr_Time(10,0); // Add X sec + Y microsec
+VNextCtrl+= Pr_Time(0,100000); // Add X sec + Y microsec
 time=VNextCtrl;
 [ServiceRequest]
 InformAt
@@ -464,7 +464,8 @@ FToReady()
 0
 1
  
-0
+1
+pus_service129_drone_ready();
 Guard
 GExecFlightPlan()
 0
