@@ -75,6 +75,10 @@ void	CCDroneMng::EDROOM_CTX_Top_0::FExecDroneTc()
 {
    //Handle Msg->data
   CDTCHandler & varSDroneTC = *(CDTCHandler *)Msg->data;
+	
+		// Data access
+	
+	// ... =varSDroneTC;
 varSDroneTC.ExecDroneTC();
 
 }
@@ -438,7 +442,7 @@ TEDROOMTransId CCDroneMng::EDROOM_SUB_Top_0::EDROOMReadyArrival()
 		switch(Msg->signal)
 		{
 
-			case (SDroneSetUp): 
+			case (SDroneTC): 
 
 				 if (*Msg->GetPInterface() == DroneMngCtrl)
 				{
