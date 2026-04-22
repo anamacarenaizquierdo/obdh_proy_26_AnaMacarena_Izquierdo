@@ -271,7 +271,7 @@ SelfTest
 OSubEst
 Ready
 DSubEst
-FToReady();
+;
 [Trigger]
 DroneMngCtrl
 SDroneSetUp

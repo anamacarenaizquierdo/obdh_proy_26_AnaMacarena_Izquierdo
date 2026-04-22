@@ -225,8 +225,6 @@ void CCDroneMng::EDROOM_SUB_Top_0::EDROOMBehaviour()
 			case (ToReady):
 				//Msg->Data Handling 
 				FGetConfig();
-				//Execute Action 
-				FToReady();
 				//Reply Synchronous Message 
 				FReplyDroneReady();
 				//Next State is Ready
