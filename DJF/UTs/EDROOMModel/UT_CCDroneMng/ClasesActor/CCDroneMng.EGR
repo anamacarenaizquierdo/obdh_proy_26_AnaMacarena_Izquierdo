@@ -366,18 +366,19 @@ FExecDroneTc()
 0
 1
  
-5
+6
 	
 		// Data access
 	
 	// ... =varSDroneTC;
+
 varSDroneTC.ExecDroneTC();
 [ServiceRequest]
 Msg->data
 DroneMngCtrl
 SDroneTC
 CDTCHandler
-
+EDROOMprioVeryHigh
 BasicAction
 FFlightCtrlAlgorithm()
 0

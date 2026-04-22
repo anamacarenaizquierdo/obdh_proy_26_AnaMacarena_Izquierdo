@@ -79,6 +79,7 @@ void	CCDroneMng::EDROOM_CTX_Top_0::FExecDroneTc()
 		// Data access
 	
 	// ... =varSDroneTC;
+
 varSDroneTC.ExecDroneTC();
 
 }
