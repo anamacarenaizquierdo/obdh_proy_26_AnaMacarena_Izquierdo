@@ -112,7 +112,7 @@ void	CCDroneMng::EDROOM_CTX_Top_0::FInitFlightPlan()
    //Define absolute time
   Pr_Time time;
 time.GetTime(); // Get current monotonic time
-time+=Pr_Time(0,10000); // Add X sec + Y microsec
+time+=Pr_Time(0,100000); // Add X sec + Y microsec
 VNextCtrl=time;
 pus_service129_init_flight_plan();
    //Program absolute timer 
