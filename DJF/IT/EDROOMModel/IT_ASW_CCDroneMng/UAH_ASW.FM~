@@ -19,13 +19,13 @@ UAH_ASW
 [CurrentTarget]
 0
 [MESP Directory]
-C:\Users\Huawei\Documents\GitHub\gfie-OBDH-laboratorio-2025-2026-anamacarenaizquierdo\Prac7\asw_pus_rtems_5_0_leon3_st19\asw
+C:\Users\Huawei\Documents\GitHub\obdh_proy_26_AnaMacarena_Izquierdo\DJF\IT\it_asw_ccdronemng_freertos_hito3\asw
 [MESP main Directory]
-C:\Users\Huawei\Documents\GitHub\gfie-OBDH-laboratorio-2025-2026-anamacarenaizquierdo\Prac7\asw_pus_rtems_5_0_leon3_st19
+C:\Users\Huawei\Documents\GitHub\obdh_proy_26_AnaMacarena_Izquierdo\DJF\IT\it_asw_ccdronemng_freertos_hito3
 [MESP main prototype]
-extern "C" rtems_task Init (uint32_t arg)
+int main (void)
 [MESP main return]
-;
+return 0;
 [Dyn Priority]
 0
 [Main Cmp Priority]
