@@ -4,7 +4,7 @@
 
 //TODO 11 Part 1 Add ExecCtrlDroneTC as a new type of TC in the enum TTCExecCtrl
 enum TTCExecCtrl {
-	ExecCtrlPrioTC, ExecCtrlReboot, ExecCtrlHK_FDIRTC, ExecCtrlBKGTC, ExecCtrlDroneTC
+	ExecCtrlPrioTC, ExecCtrlReboot, ExecCtrlHK_FDIRTC, ExecCtrlBKGTC, ExecCtrlDroneTC,
 };
 
 class CDTCExecCtrl{
@@ -59,7 +59,7 @@ class CDTCExecCtrl{
 	 * \return true if it is a Drone telecommand
 	 *
 	 */
-	bool IsDroneTC() {  };
+	bool IsDroneTC() { return (ExecCtrlDroneTC==mExecCtrl); };
 	
 };
 

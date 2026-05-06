@@ -77,6 +77,9 @@ CDTCExecCtrl CDTCHandler::GetExecCtrl() {
 		execCtrl.mExecCtrl = ExecCtrlBKGTC;
 		break;
 
+	case (129):
+		execCtrl.mExecCtrl = ExecCtrlDroneTC;
+		break;
 
 	default:
 
@@ -130,8 +133,6 @@ void CDTCHandler::ExecRebootTC() {
 		uint8_t type = mTCHandler.tc_df_header.type;
 
 		switch (type) {
-
-
 
 		default:
 			//No defined code for this TC. ASW design error
@@ -201,7 +202,6 @@ void CDTCHandler::ExecBKGTC() {
 			pus_service20_exec_tc(&mTCHandler);
 			break;
 
-
 		default:
 			//No defined code for this TC. Design error
 			pus_service1_tx_TM_1_4_TC_X_Y_NO_EXEC_CODE(&mTCHandler);
@@ -225,8 +225,9 @@ void CDTCHandler::ExecDroneTC() {
 		uint8_t type = mTCHandler.tc_df_header.type;
 
 		switch (type) {
-
-
+		case (129):
+			pus_service129_exec_tc(&mTCHandler);
+			break;
 
 		default:
 			//No defined code for this TC. Design error
