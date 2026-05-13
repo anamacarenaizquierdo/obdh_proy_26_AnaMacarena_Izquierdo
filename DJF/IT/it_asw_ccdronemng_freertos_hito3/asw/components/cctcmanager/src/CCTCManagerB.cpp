@@ -119,7 +119,7 @@ void	CCTCManager::EDROOM_CTX_Top_0::FFwdDroneTC()
 	
 		// Complete Data 
 	
-	*pSDroneTC_Data= VCurrentTC
+	*pSDroneTC_Data= VCurrentTC;
    //Send message 
    DroneMngCtrl.send(SDroneTC,pSDroneTC_Data,&EDROOMPoolCDTCHandler); 
 }

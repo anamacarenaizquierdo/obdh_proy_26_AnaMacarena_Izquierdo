@@ -38,7 +38,27 @@ void EmuGSS_TCProgram129_1::BuildTCAppData(tc_mem_descriptor_t &tc_descriptor){
 
 
 //TODO 18 Part 2 Complete EmuGSS_TCProgram129_2 methods definition
+EmuGSS_TCProgram129_2::EmuGSS_TCProgram129_2(uint32_t uniTime2YK,
+                         const char * brief,
+						 float Kp,float Ki, float Kd)
+                        :EmuGSS_TCProgram(uniTime2YK,129,2,
+                        		TC_129_2_APPDATA_LENGTH,brief){
 
+	X=Kp;
+	Y=Ki;
+	Z=Kd;
+    NewProgram(this);
+}
+
+void EmuGSS_TCProgram129_2::BuildTCAppData(tc_mem_descriptor_t &tc_descriptor){
+
+
+	SetNextFloat(X);
+	SetNextFloat(Y);
+	SetNextFloat(Z);
+
+
+}
 
 EmuGSS_TCProgram129_3::EmuGSS_TCProgram129_3(uint32_t uniTime2YK,
                          const char * brief)
@@ -52,7 +72,7 @@ EmuGSS_TCProgram129_3::EmuGSS_TCProgram129_3()
                         :EmuGSS_TCProgram(0,129,3,TC_129_3_APPDATA_LENGTH,"NULL"){
 
 	//No Program
-    // NewProgram(this);
+    //NewProgram(this);
 }
 
 
