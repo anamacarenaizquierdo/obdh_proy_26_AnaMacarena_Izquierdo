@@ -240,7 +240,7 @@ FProgNextCtrl();
 469 324 552 530 0
 [FinGraficoRama]
 [Transiciones]
-4
+5
 [Version Transicion]
 5
 Init
@@ -334,6 +334,29 @@ true
 [Version GraficoTransicion]
 0
 533 530 469 358 3
+[FinGraficoTransicion]
+ExecTCInFlight
+FlightPlan
+OSubEst
+FlightPlan
+DSubEst
+;
+[Trigger]
+DroneMngCtrl
+SDroneTC
+true
+ 
+ 
+ 
+FExecDroneTc();
+;
+;
+0
+;
+[GraficoTransicion]
+[Version GraficoTransicion]
+0
+443 608 294 608 5
 [FinGraficoTransicion]
 [VariablesConstantes]
 1

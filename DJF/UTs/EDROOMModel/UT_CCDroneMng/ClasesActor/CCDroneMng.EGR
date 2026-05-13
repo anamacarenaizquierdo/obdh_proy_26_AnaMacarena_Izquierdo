@@ -170,9 +170,9 @@ true
 Ready
 DSubEst
 ;
-
  
-
+ 
+ 
 ;
 ;
 ;
@@ -187,9 +187,9 @@ GExecFlightPlan()
 FlightPlan
 DSubEst
 FInitFlightPlan();
-
  
-
+ 
+ 
 ;
 ;
 ;
@@ -210,9 +210,9 @@ GFlightPlanDone()
 Ready
 DSubEst
 FToReady();
-
  
-
+ 
+ 
 ;
 ;
 ;
@@ -227,9 +227,9 @@ true
 FlightPlan
 DSubEst
 FProgNextCtrl();
-
  
-
+ 
+ 
 ;
 ;
 ;
@@ -371,7 +371,7 @@ FExecDroneTc()
 		// Data access
 	
 	// ... =varSDroneTC;
-
+ 
 varSDroneTC.ExecDroneTC();
 [ServiceRequest]
 Msg->data
