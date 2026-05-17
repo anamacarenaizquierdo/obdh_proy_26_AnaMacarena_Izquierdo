@@ -251,67 +251,6 @@ Operation (
 
 Transaction (
    Type            => regular,
-   Name            => trans_hk_fdir,
-   External_Events => 
-      ( ( Type       => Periodic,
-          Name       => ev_hk_fdir,
-          Period     => 1.000,
-          Max_Jitter => 0.000,
-          Phase      => 0.000)),
-   Internal_Events => 
-      ( ( Type => Regular,
-          Name => dl_hk_fdir,
-          Timing_Requirements => 
-            ( Type             => Hard_Global_Deadline,
-              Deadline         => 1.000,
-              Referenced_Event => ev_hk_fdir))),
-   Event_Handlers  => 
-      ( (Type               => Activity,
-         Input_Event        => ev_hk_fdir,
-         Output_Event       => dl_hk_fdir,
-         Activity_Operation => fdohk_fdir,
-         Activity_Server    => hk_fdirmng)));
-
-Transaction (
-   Type            => regular,
-   Name            => trans_new_prio_tc,
-   External_Events => 
-      ( ( Type             => Bursty,
-          Name             => ev_new_prio_tc,
-          Avg_Interarrival => 0.000,
-          Distribution     => UNIFORM,
-          Bound_Interval   => 1.000,
-          Max_Arrivals     => 10)),
-   Internal_Events => 
-      ( ( Type => Regular,
-          Name => dl_new_prio_tc,
-          Timing_Requirements => 
-            ( Type             => Hard_Global_Deadline,
-              Deadline         => 1.000,
-              Referenced_Event => ev_new_prio_tc)),
-        ( Type => Regular,
-          Name => ev_irq18bottomhalf_signal),
-        ( Type => Regular,
-          Name => ev_rxtc_edroomirqsignal)),
-   Event_Handlers  => 
-      ( (Type               => Activity,
-         Input_Event        => ev_new_prio_tc,
-         Output_Event       => ev_irq18bottomhalf_signal,
-         Activity_Operation => irq18tophalf,
-         Activity_Server    => irq18handler),
-        (Type               => Activity,
-         Input_Event        => ev_irq18bottomhalf_signal,
-         Output_Event       => ev_rxtc_edroomirqsignal,
-         Activity_Operation => irq18bottomhalf,
-         Activity_Server    => irq18bottomhalftask),
-        (Type               => Activity,
-         Input_Event        => ev_rxtc_edroomirqsignal,
-         Output_Event       => dl_new_prio_tc,
-         Activity_Operation => cop_exec_prio_tc,
-         Activity_Server    => tcmanager)));
-
-Transaction (
-   Type            => regular,
    Name            => trans_hk_drone_abort,
    External_Events => 
       ( ( Type       => Periodic,

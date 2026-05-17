@@ -1,67 +1,7 @@
 Real_Time_Situation (
    Generation_Tool    => "MAST Schedulability Analysis, version 1.7.0.0",
    Generation_Profile => "C:\Users\Huawei\Downloads\mast_analysis.exe default C:\Users\Huawei\Documents\GitHub\obdh_proy_26_AnaMacarena_Izquierdo\DJF\Modelo_MAST\asw0_hitofinal C:\Users\Huawei\Documents\GitHub\obdh_proy_26_AnaMacarena_Izquierdo\DJF\Modelo_MAST\asw0_hitofinal.out",
-   Generation_Date    => 2026-05-16T16:22:20);
-
-Transaction (
-   Name     => trans_hk_fdir,
-   Results  => 
-       ((Type                          => Timing_Result,
-         Event_Name                    => dl_hk_fdir,
-         Num_Of_Suspensions            => 0,
-         Worst_Blocking_Time           => 0.000,
-         Worst_Global_Response_Times   => 
-            ((Referenced_Event => ev_hk_fdir,
-              Time_Value       => 0.097578)),
-         Best_Global_Response_Times    => 
-            ((Referenced_Event => ev_hk_fdir,
-              Time_Value       => 0.010002)),
-         Jitters                       => 
-            ((Referenced_Event => ev_hk_fdir,
-              Time_Value       => 0.087576)))));
-
-Transaction (
-   Name     => trans_new_prio_tc,
-   Results  => 
-       ((Type                          => Timing_Result,
-         Event_Name                    => dl_new_prio_tc,
-         Num_Of_Suspensions            => 1,
-         Worst_Blocking_Time           => 1.000E-04,
-         Worst_Global_Response_Times   => 
-            ((Referenced_Event => ev_new_prio_tc,
-              Time_Value       => 0.078474)),
-         Best_Global_Response_Times    => 
-            ((Referenced_Event => ev_new_prio_tc,
-              Time_Value       => 0.002504)),
-         Jitters                       => 
-            ((Referenced_Event => ev_new_prio_tc,
-              Time_Value       => 0.075970))),
-        (Type                          => Timing_Result,
-         Event_Name                    => ev_irq18bottomhalf_signal,
-         Num_Of_Suspensions            => 0,
-         Worst_Blocking_Time           => 0.000,
-         Worst_Global_Response_Times   => 
-            ((Referenced_Event => ev_new_prio_tc,
-              Time_Value       => 0.001012)),
-         Best_Global_Response_Times    => 
-            ((Referenced_Event => ev_new_prio_tc,
-              Time_Value       => 1.002E-04)),
-         Jitters                       => 
-            ((Referenced_Event => ev_new_prio_tc,
-              Time_Value       => 9.118E-04))),
-        (Type                          => Timing_Result,
-         Event_Name                    => ev_rxtc_edroomirqsignal,
-         Num_Of_Suspensions            => 0,
-         Worst_Blocking_Time           => 0.000,
-         Worst_Global_Response_Times   => 
-            ((Referenced_Event => ev_new_prio_tc,
-              Time_Value       => 0.002042)),
-         Best_Global_Response_Times    => 
-            ((Referenced_Event => ev_new_prio_tc,
-              Time_Value       => 2.022E-04)),
-         Jitters                       => 
-            ((Referenced_Event => ev_new_prio_tc,
-              Time_Value       => 0.001840)))));
+   Generation_Date    => 2026-05-17T10:14:33);
 
 Transaction (
    Name     => trans_hk_drone_abort,
@@ -72,39 +12,39 @@ Transaction (
          Worst_Blocking_Time           => 0.000,
          Worst_Global_Response_Times   => 
             ((Referenced_Event => ev_hk_fdir,
-              Time_Value       => 0.097578)),
+              Time_Value       => 0.062484)),
          Best_Global_Response_Times    => 
             ((Referenced_Event => ev_hk_fdir,
               Time_Value       => 0.010102)),
          Jitters                       => 
             ((Referenced_Event => ev_hk_fdir,
-              Time_Value       => 0.087476))),
+              Time_Value       => 0.052382))),
         (Type                          => Timing_Result,
          Event_Name                    => ev_drone_tc_in_flight,
          Num_Of_Suspensions            => 1,
          Worst_Blocking_Time           => 1.000E-04,
          Worst_Global_Response_Times   => 
             ((Referenced_Event => ev_hk_fdir,
-              Time_Value       => 0.175132)),
+              Time_Value       => 0.114956)),
          Best_Global_Response_Times    => 
             ((Referenced_Event => ev_hk_fdir,
               Time_Value       => 0.011304)),
          Jitters                       => 
             ((Referenced_Event => ev_hk_fdir,
-              Time_Value       => 0.163828))),
+              Time_Value       => 0.103652))),
         (Type                          => Timing_Result,
          Event_Name                    => dl_hk_drone_abort,
          Num_Of_Suspensions            => 1,
          Worst_Blocking_Time           => 1.000E-04,
          Worst_Global_Response_Times   => 
             ((Referenced_Event => ev_hk_fdir,
-              Time_Value       => 0.228422)),
+              Time_Value       => 0.166224)),
          Best_Global_Response_Times    => 
             ((Referenced_Event => ev_hk_fdir,
               Time_Value       => 0.012306)),
          Jitters                       => 
             ((Referenced_Event => ev_hk_fdir,
-              Time_Value       => 0.216116)))));
+              Time_Value       => 0.153918)))));
 
 Transaction (
    Name     => trans_flight_ctrl,
@@ -115,17 +55,17 @@ Transaction (
          Worst_Blocking_Time           => 1.000E-04,
          Worst_Global_Response_Times   => 
             ((Referenced_Event => ev_flight_ctrl,
-              Time_Value       => 0.053290)),
+              Time_Value       => 0.051268)),
          Best_Global_Response_Times    => 
             ((Referenced_Event => ev_flight_ctrl,
               Time_Value       => 0.050102)),
          Jitters                       => 
             ((Referenced_Event => ev_flight_ctrl,
-              Time_Value       => 0.003188)))));
+              Time_Value       => 0.001166)))));
 
 Processing_Resource (
    Name     => leon3,
    Results  => 
        ((Type   => Utilization,
-         Total  => 54.94%)));
+         Total  => 51.43%)));
 
