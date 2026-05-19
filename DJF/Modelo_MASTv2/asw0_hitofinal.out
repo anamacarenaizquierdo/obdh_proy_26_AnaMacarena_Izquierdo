@@ -1,0 +1,71 @@
+Real_Time_Situation (
+   Generation_Tool    => "MAST Schedulability Analysis, version 1.7.0.0",
+   Generation_Profile => "C:\Users\Huawei\Downloads\mast_analysis.exe default C:\Users\Huawei\Documents\GitHub\obdh_proy_26_AnaMacarena_Izquierdo\DJF\Modelo_MAST\asw0_hitofinal C:\Users\Huawei\Documents\GitHub\obdh_proy_26_AnaMacarena_Izquierdo\DJF\Modelo_MAST\asw0_hitofinal.out",
+   Generation_Date    => 2026-05-17T10:14:33);
+
+Transaction (
+   Name     => trans_hk_drone_abort,
+   Results  => 
+       ((Type                          => Timing_Result,
+         Event_Name                    => ev_tc_event_action,
+         Num_Of_Suspensions            => 0,
+         Worst_Blocking_Time           => 0.000,
+         Worst_Global_Response_Times   => 
+            ((Referenced_Event => ev_hk_fdir,
+              Time_Value       => 0.062484)),
+         Best_Global_Response_Times    => 
+            ((Referenced_Event => ev_hk_fdir,
+              Time_Value       => 0.010102)),
+         Jitters                       => 
+            ((Referenced_Event => ev_hk_fdir,
+              Time_Value       => 0.052382))),
+        (Type                          => Timing_Result,
+         Event_Name                    => ev_drone_tc_in_flight,
+         Num_Of_Suspensions            => 1,
+         Worst_Blocking_Time           => 1.000E-04,
+         Worst_Global_Response_Times   => 
+            ((Referenced_Event => ev_hk_fdir,
+              Time_Value       => 0.114956)),
+         Best_Global_Response_Times    => 
+            ((Referenced_Event => ev_hk_fdir,
+              Time_Value       => 0.011304)),
+         Jitters                       => 
+            ((Referenced_Event => ev_hk_fdir,
+              Time_Value       => 0.103652))),
+        (Type                          => Timing_Result,
+         Event_Name                    => dl_hk_drone_abort,
+         Num_Of_Suspensions            => 1,
+         Worst_Blocking_Time           => 1.000E-04,
+         Worst_Global_Response_Times   => 
+            ((Referenced_Event => ev_hk_fdir,
+              Time_Value       => 0.166224)),
+         Best_Global_Response_Times    => 
+            ((Referenced_Event => ev_hk_fdir,
+              Time_Value       => 0.012306)),
+         Jitters                       => 
+            ((Referenced_Event => ev_hk_fdir,
+              Time_Value       => 0.153918)))));
+
+Transaction (
+   Name     => trans_flight_ctrl,
+   Results  => 
+       ((Type                          => Timing_Result,
+         Event_Name                    => dl_flight_ctrl,
+         Num_Of_Suspensions            => 1,
+         Worst_Blocking_Time           => 1.000E-04,
+         Worst_Global_Response_Times   => 
+            ((Referenced_Event => ev_flight_ctrl,
+              Time_Value       => 0.051268)),
+         Best_Global_Response_Times    => 
+            ((Referenced_Event => ev_flight_ctrl,
+              Time_Value       => 0.050102)),
+         Jitters                       => 
+            ((Referenced_Event => ev_flight_ctrl,
+              Time_Value       => 0.001166)))));
+
+Processing_Resource (
+   Name     => leon3,
+   Results  => 
+       ((Type   => Utilization,
+         Total  => 51.43%)));
+
